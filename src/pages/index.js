@@ -1,8 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
 
-const IndexPage = () => (
-    <h1>Hi people</h1>
+/** Components */
+import MainLayout from '../components/MainLayout';
+
+/** Component */
+const IndexPage = ( props ) => (
+    <MainLayout>
+        <h1>Gatsby Hotel</h1>
+    </MainLayout>
 )
 
 export default IndexPage
