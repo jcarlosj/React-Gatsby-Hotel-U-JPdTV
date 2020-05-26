@@ -4,10 +4,10 @@ import React from "react";
 import MainLayout from '../components/layout/MainLayout';
 
 /** Component */
-const IndexPage = ( props ) => (
+const UsPage = ( props ) => (
     <MainLayout>
-        <h1>Home</h1>
+        <h1>Nosotros</h1>
     </MainLayout>
 )
 
-export default IndexPage
+export default UsPage
