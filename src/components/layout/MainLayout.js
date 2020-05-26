@@ -1,9 +1,13 @@
 import React from 'react';
 
-/** Main Layout Component */
+/** Components */
+import Header from './Header';
+
+/** MainLayout Component */
 const MainLayout = ( props ) => {
     return (
         <>
+            <Header />
             { props .children }
         </>
     );

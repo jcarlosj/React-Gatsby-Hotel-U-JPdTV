@@ -1,7 +1,7 @@
 import React from "react";
 
 /** Components */
-import MainLayout from '../components/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 
 /** Component */
 const IndexPage = ( props ) => (
