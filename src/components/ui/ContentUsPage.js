@@ -1,6 +1,9 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
+/** Dependencies */
+import Image from 'gatsby-image';
+
 /** Component */
 const ContentUsPage = () => {
 
@@ -31,8 +34,8 @@ const ContentUsPage = () => {
             <h2>{ title }</h2>
             <div>
                 <p>{ content }</p>
-                <img 
-                    src={ image .fluid .src } 
+                <Image 
+                    fluid={ image .fluid } 
                 />
             </div>
         </>
