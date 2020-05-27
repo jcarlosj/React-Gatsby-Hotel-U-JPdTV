@@ -28,6 +28,12 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+        resolve: `gatsby-source-datocms`,
+        options: {
+            apiToken: `bac0774c170d76e3c2d06aa75b1fab`
+        }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
