@@ -3,6 +3,26 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 /** Dependencies */
 import Image from 'gatsby-image';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
+
+/** Style Components */
+const ContentHome = styled .section `
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 4rem 0;
+    width: 95%;
+
+    @media ( min-width: 768px ) {
+        colum-gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat( 2 , 1fr );
+    }
+
+    p {
+        line-height: 1.6;
+    }
+`;
 
 /** Component */
 const ContentHomePage = () => {
@@ -31,13 +51,18 @@ const ContentHomePage = () => {
 
     return( 
         <>
-            <h2>{ title }</h2>
-            <div>
+            <h2
+            css={ css `
+                font-size: 4rem;
+                margin-top: 4rem;
+                text-align: center;
+            `}>{ title }</h2>
+            <ContentHome>
                 <p>{ content }</p>
                 <Image 
                     fluid={ image .fluid } 
                 />
-            </div>
+            </ContentHome>
         </>
     );
 }
