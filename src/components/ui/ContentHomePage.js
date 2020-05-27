@@ -7,7 +7,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 /** Style Components */
-const ContentHome = styled .section `
+const ContentHome = styled .main `
     margin: 0 auto;
     max-width: 1200px;
     padding: 4rem 0;
@@ -52,11 +52,12 @@ const ContentHomePage = () => {
     return( 
         <>
             <h2
-            css={ css `
-                font-size: 4rem;
-                margin-top: 4rem;
-                text-align: center;
-            `}>{ title }</h2>
+                css={ css `
+                    font-size: 4rem;
+                    margin-top: 4rem;
+                    text-align: center;
+                `}
+            >{ title }</h2>
             <ContentHome>
                 <p>{ content }</p>
                 <Image 
