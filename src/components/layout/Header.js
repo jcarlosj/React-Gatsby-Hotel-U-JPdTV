@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <header
             css={ css `
-                background-color: #333333;
+                background-color: #222222;
                 padding: 1rem;
             `}
         >

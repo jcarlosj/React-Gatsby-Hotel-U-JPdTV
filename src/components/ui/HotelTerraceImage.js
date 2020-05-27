@@ -6,9 +6,36 @@ import styled from '@emotion/styled';
 import BackgroundImage from 'gatsby-background-image';
 
 /** Style Components */
-const BgImage = styled( BackgroundImage ) `
-    height: 700px;
-`;
+const 
+    BgImage = styled( BackgroundImage ) `
+        height: 700px;
+    `,
+    ContentBgImage = styled .div `
+        align-items: center;
+        background-image: linear-gradient( to top, rgba( 34, 49, 63, .65), rgba( 34, 49, 63, .65) );
+        color: white;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+
+            @media ( min-width 992px ) {
+                font-size: 5.8rem;
+            }
+        }
+        p {
+            font-size: 2rem;
+
+            @media ( min-width 992px ) {
+                font-size: 2.7rem;
+            }
+        }
+    `;
 
 /** HotelTerraceImage Component */
 const HotelTerraceImage = () => {
@@ -37,7 +64,10 @@ const HotelTerraceImage = () => {
             fluid={ image .sharp .fluid }
             fadeIn="soft"
         >
-        
+            <ContentBgImage>
+                <h1>Bienvenido a Hotel Gatsby</h1>
+                <p>El mejor lugar para tus vacaciones</p>
+            </ContentBgImage>
         </BgImage>
     );
 }
