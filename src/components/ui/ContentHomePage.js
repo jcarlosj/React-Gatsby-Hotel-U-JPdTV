@@ -21,11 +21,18 @@ const ContentHomePage = () => {
         }
     `);
 
-    console .log( 'GraphQL - ContentHomePage', dataPage );
+    console .log( 'GraphQL - ContentHomePage', dataPage .allDatoCmsPage .nodes[ 0 ] );
+
+    /** Destructuring response GrapQL query */
+    const { title, content, image } = dataPage .allDatoCmsPage .nodes[ 0 ];
 
     return( 
         <>
-            <h2>Contenido de la pagina de Home</h2>
+            <h2>{ title }</h2>
+            <div>
+                <p>{ content }</p>
+                <img src={ image .fluid .src } />
+            </div>
         </>
     );
 }
