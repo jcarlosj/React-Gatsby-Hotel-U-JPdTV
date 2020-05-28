@@ -50,7 +50,7 @@ const BriefRoomInformation = ({ room }) => {
                 >{ title }</h3>
                 <p>{ content }</p>
                 <Button
-                    to="/"
+                    to={ slug }
                 >Ver Detalles</Button>
             </div>
         </li>
