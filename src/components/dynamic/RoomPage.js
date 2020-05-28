@@ -1,5 +1,8 @@
 import { graphql } from 'gatsby';
 
+/** Dependencies */
+import Image from 'gatsby-image';
+
 /** Components */
 import MainLayout from '../layout/MainLayout';
 
@@ -34,8 +37,8 @@ const RoomPage = ( { data: { allDatoCmsRoom: { nodes } } } ) => {         /** De
             <main>
                 <h1>{ title }</h1>
                 <p>{ content }</p>
-                <img 
-                    src={ image .fluid .src } 
+                <Image 
+                    fluid={ image .fluid } 
                     alt={ title }
                 />
             </main>
