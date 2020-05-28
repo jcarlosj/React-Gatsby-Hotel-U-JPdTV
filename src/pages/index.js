@@ -48,7 +48,7 @@ const IndexPage = ( props ) => {
             <UlRooms>
                 { rooms .map( room => (
                     <BriefRoomInformation 
-                        key={ room .id }
+                        
                         room={ room }
                     />
                 ))}
