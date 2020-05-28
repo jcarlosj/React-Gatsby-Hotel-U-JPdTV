@@ -29,7 +29,7 @@ exports .createPages = async ({ actions, graphql, reporter }) => {
         /** Creación dinámica a partir de un objeto que indica configuración de cada pagina generada */
         actions .createPage({
             path: room .slug,                                                   /** Debe ser el mismo que se usa en el path del enlace o boton en la vista (puede usarse el ID) */
-            component: require .resolve( `./src/components/dynamic/Room` ),     /** Componente que renderizará la vista dinámica */
+            component: require .resolve( `./src/components/dynamic/RoomPage` ), /** Componente que renderizará la página dinámica por habitación */
             context: {                                                          /** Pasa valores al Componente */
                 slug: room .slug
             }
