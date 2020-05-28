@@ -14,7 +14,11 @@ const MainLayout = ( props ) => {
             <Global
                 styles={ css `
                     html {
+                        box-sizing: border-box;
                         font-size: 62.5%;
+                    }
+                    *, *:after, *:before {
+                        box-sizing: inherit;
                     }
                     body {
                         font-size: 18px;
