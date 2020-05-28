@@ -1,5 +1,9 @@
 import React from 'react';
 
+/** Dependencies */
+import Image from 'gatsby-image';
+
+/** Component */
 const BriefRoomInformation = ({ room }) => {
 
     /** Destructuring data object */
@@ -7,8 +11,8 @@ const BriefRoomInformation = ({ room }) => {
 
     return (
         <li>
-            <img 
-                src={ image .fluid .src } 
+            <Image 
+                fluid={ image .fluid } 
                 alt={ title }
             />
             <div>
