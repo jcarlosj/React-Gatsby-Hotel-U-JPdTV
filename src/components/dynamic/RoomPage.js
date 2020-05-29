@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 
 /** Dependencies */
 import Image from 'gatsby-image';
+import { css } from '@emotion/core';
 
 /** Components */
 import MainLayout from '../layout/MainLayout';
@@ -34,8 +35,19 @@ const RoomPage = ( { data: { allDatoCmsRoom: { nodes } } } ) => {         /** De
 
     return ( 
         <MainLayout>
-            <main>
-                <h1>{ title }</h1>
+            <main
+                css={ css `
+                    margin: 5rem auto;
+                    max-width: 1200px;
+                    width: 95%;
+                `}
+            >
+                <h1
+                    css={ css `
+                        margin-top: 4rem;
+                        text-align: center;
+                    `}
+                >{ title }</h1>
                 <p>{ content }</p>
                 <Image 
                     fluid={ image .fluid } 
