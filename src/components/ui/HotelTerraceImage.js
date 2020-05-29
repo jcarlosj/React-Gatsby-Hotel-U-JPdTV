@@ -5,6 +5,9 @@ import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import BackgroundImage from 'gatsby-background-image';
 
+/** Hooks */
+import useSeo from '../../hooks/useSeo';
+
 /** Style Components */
 const 
     BgImage = styled( BackgroundImage ) `
@@ -40,6 +43,10 @@ const
 /** HotelTerraceImage Component */
 const HotelTerraceImage = () => {
 
+    const 
+        seo = useSeo(),
+        { siteName, fallbackSeo: { description } } = seo;        /** Destructuring Data */
+
     /** Consulta GraphQL para obtener imagen estática 
      *      - Agregar Fragment '...GatsbyImageSharpFluid_withWebp' 
      *        (No es soportado por GraphiQL, pero Gasttby si)*/ 
@@ -65,8 +72,8 @@ const HotelTerraceImage = () => {
             fadeIn="soft"
         >
             <ContentBgImage>
-                <h1>Bienvenido a Hotel Gatsby</h1>
-                <p>El mejor lugar para tus vacaciones</p>
+                <h1>Bienvenido a { siteName }</h1>
+                <p>{ description }</p>
             </ContentBgImage>
         </BgImage>
     );

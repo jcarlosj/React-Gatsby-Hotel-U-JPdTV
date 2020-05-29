@@ -16,7 +16,7 @@ const Logo = styled( Link ) `
 `;
 
 /** Footer Component */
-const Footer = () => {
+const Footer = ({ siteName }) => {
 
     const currentYear = new Date() .getFullYear();
 
@@ -59,7 +59,7 @@ const Footer = () => {
                 margin: 0;
                 padding: 1rem;
                 text-align: center;
-            `}>Hotel Gatsby { currentYear } &copy; Todos los derechos reservados</p>
+            `}>{ siteName } { currentYear } &copy; Todos los derechos reservados</p>
         </>
     );
 }

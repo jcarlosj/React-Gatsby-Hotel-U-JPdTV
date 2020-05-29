@@ -8,8 +8,16 @@ import { Global, css } from '@emotion/core';
 import Header from './Header';
 import Footer from './Footer';
 
+/** Hooks */
+import useSeo from '../../hooks/useSeo';
+
 /** MainLayout Component */
 const MainLayout = ( props ) => {
+
+    const 
+        seo = useSeo(),
+        { siteName, fallbackSeo: { description } } = seo;        /** Destructuring Data */
+
     return (
         <>
             <Global
@@ -45,14 +53,15 @@ const MainLayout = ( props ) => {
                 `}
             />
             <Helmet>
-                <title>Gatsby Hotel</title>
+                <title>{ siteName }</title>
+                <meta name="description" content={ description } />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
                 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet" />
             </Helmet>
 
-            <Header />
+            <Header siteName={ siteName } />
             { props .children }
-            <Footer />
+            <Footer siteName={ siteName } />
         </>
     );
 }

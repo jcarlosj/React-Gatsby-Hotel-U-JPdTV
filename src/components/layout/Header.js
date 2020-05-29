@@ -16,7 +16,7 @@ const Logo = styled( Link ) `
 `;
 
 /** Header Component */
-const Header = () => {
+const Header = ({ siteName }) => {
     return (
         <header
             css={ css `
@@ -39,7 +39,7 @@ const Header = () => {
                 <Logo
                     to="/"
                 >
-                    <h1>Hotel Gatsby</h1>
+                    <h1>{ siteName }</h1>
                 </Logo>
                 <MainNavigation />
             </div>
