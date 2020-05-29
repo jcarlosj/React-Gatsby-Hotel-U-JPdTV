@@ -22,7 +22,7 @@ const UlRooms = styled .ul `
     @media ( min-width: 768px ) {
         display: grid;
         grid-template-columns: repeat( 3, 1fr );
-        column-gap: 3rem;
+        column-gap: 2rem;
     }
 `;
 
@@ -48,7 +48,7 @@ const IndexPage = ( props ) => {
             <UlRooms>
                 { rooms .map( room => (
                     <BriefRoomInformation 
-                        
+                        key={ room .id }
                         room={ room }
                     />
                 ))}

@@ -8,6 +8,7 @@ const useRooms = () => {
         query {
             allDatoCmsRoom {
                 nodes {
+                    id
                     title
                     slug
                     content

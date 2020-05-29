@@ -14,7 +14,7 @@ const ContentHome = styled .main `
     width: 95%;
 
     @media ( min-width: 768px ) {
-        colum-gap: 2rem;
+        column-gap: 3rem;
         display: grid;
         grid-template-columns: repeat( 2 , 1fr );
     }
