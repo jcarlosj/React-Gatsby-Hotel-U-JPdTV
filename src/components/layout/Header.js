@@ -1,10 +1,19 @@
 import React from 'react';
+import { Link } from 'gatsby';
+
+/** Dependencies */
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 
 /** Components */
 import MainNavigation from './MainNavigation';
 
-/** Dependencies */
-import { css } from '@emotion/core';
+/** Style Components */
+const Logo = styled( Link ) `
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+`;
 
 /** Header Component */
 const Header = () => {
@@ -27,12 +36,11 @@ const Header = () => {
                     }
                 `}
             >
-                <h1
-                    css={ css `
-                        color: #FFFFFF;
-                        text-align: center;
-                    `}
-                >Hotel Gatsby</h1>
+                <Logo
+                    to="/"
+                >
+                    <h1>Hotel Gatsby</h1>
+                </Logo>
                 <MainNavigation />
             </div>
 
