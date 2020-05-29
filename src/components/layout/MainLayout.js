@@ -6,6 +6,7 @@ import { Global, css } from '@emotion/core';
 
 /** Components */
 import Header from './Header';
+import Footer from './Footer';
 
 /** MainLayout Component */
 const MainLayout = ( props ) => {
@@ -51,6 +52,7 @@ const MainLayout = ( props ) => {
 
             <Header />
             { props .children }
+            <Footer />
         </>
     );
 }
